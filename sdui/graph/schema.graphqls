@@ -1,0 +1,184 @@
+
+interface AppConnector {
+  id: ID!
+  name: String!
+  description: String!
+  readme: UIMarkdown!
+  docUrl: String
+  logo: UIImage!
+  carousel: UICarousel
+  tags: AppConnectorChip
+}
+
+enum AppConnectorChipEnum {
+  HOST_ENRICHMENT
+  CVE_VULN
+}
+
+interface UIComponent {
+  id: ID
+}
+
+type UIImage implements UIComponent {
+  id: ID
+  url: String
+  alt: String
+}
+
+type UIMarkdown implements UIComponent {
+  id: ID
+}
+
+interface UIPanel implements UIComponent {
+  id: ID
+  columns: Int!
+}
+
+interface Chip {
+  id: ID
+}
+
+type TextChip implements Chip {
+  id: ID
+  text: String!
+}
+
+type AppConnectorChip implements Chip {
+  id: ID
+  chips: [AppConnectorChipEnum!]!
+}
+
+type UIBasicChip implements UIComponent {
+  id: ID
+  chips: [Chip!]!
+}
+
+type UICarouselItem implements UIComponent {
+  id: ID
+  # I think there could be UIText, that allows
+  # users to also declare color etc.,
+  text: String
+  image: UIImage
+}
+
+type UICarousel implements UIComponent {
+  id: ID
+  items: [UICarouselItem!]!
+}
+
+
+type UIFormInput implements UIComponent {
+  id: ID
+  placeholder: String
+  value: String
+  # Could define the "key" where value comes from
+  dataBind: String
+
+  # Could do some built-in validation here..
+}
+
+
+
+## DYNAMIC UI RELATED ##
+## ================== ##
+
+enum UIDefaultValueType {
+  STRING
+  INT
+  BOOL
+  # Think more through JSON (JSONArray, JSONObject?)
+  JSON
+  # key1=value1, key2=value2,
+  # {key1:value, key2=value2}
+
+  # Array[type]
+}
+
+enum UIDDynamicFieldType {
+  CHECKBOX
+  INPUT
+  RADIO
+  SELECT
+  TEXTAREA
+}
+
+type UIDynamicSelectOption {
+  label: String!
+  value: UIDefaultValue
+}
+
+type UIDynamicSelect {
+  label: String!
+  fieldName: String!
+  defaultValue: UIDefaultValue
+}
+
+type UIDefaultValue {
+  valueType: UIDefaultValueType
+  value: String
+}
+
+type UIDynamicField {
+  id: ID
+  type: UIDDynamicFieldType
+  description: String
+  label: String!
+  fieldName: String!
+  required: Boolean!
+  defaultValue: UIDefaultValue
+
+  # FIXME: should be an array
+  validator: UIDynamicValidator
+
+  # not ideal but options can live here for now...
+  options: [UIDynamicSelectOption!]!
+}
+
+interface UIDynamicValidator {
+  type: String!
+  message: String!
+}
+
+type UIRegexValidator implements UIDynamicValidator {
+  type: String!
+  message: String!
+
+  pattern: String!
+}
+
+type UIRangeValidator implements UIDynamicValidator {
+  type: String!
+  message: String!
+
+  min: Int!
+  max: Int!
+}
+
+type UIDynamicFieldSet {
+  id: ID
+  columns: Int
+  label: String!
+  description: String
+
+  fields: [UIDynamicField!]!
+  conditions: [UIDynamicCondition!]!
+}
+
+type UIDynamicCondition {
+  fieldName: String!
+  operator: UIDynamicConditionOperator
+  expectedValue: UIDefaultValue
+}
+
+enum UIDynamicConditionOperator {
+  EQ
+  NEQ
+  GT
+  GTE
+  LT
+  LTE
+  EXISTS
+  NEXISTS
+  NULL
+  NNULL
+}
