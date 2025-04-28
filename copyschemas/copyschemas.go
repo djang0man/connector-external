@@ -59,23 +59,22 @@ func copyFile(src, dstDir string, hash string) (string, error) {
 	return dstPath, nil
 }
 
-func getLibraryGraphDir() (string, error) {
+func getLibraryRootDir() (string, error) {
 	_, file, _, ok := runtime.Caller(0)
 	if !ok {
 		return "", fmt.Errorf("unable to determine current file path")
 	}
 
 	currentDir := filepath.Dir(file)
-	parentDir := filepath.Dir(currentDir)
-	graphDir := filepath.Join(parentDir, "graph")
+	rootDir := filepath.Dir(currentDir)
 
-	return graphDir, nil
+	return rootDir, nil
 }
 
 func CopyGraphqlSchemas(dstDir string) ([]string, error) {
-	mainDir, err := getLibraryGraphDir()
+	rootDir, err := getLibraryRootDir()
 	if err != nil {
-		return nil, fmt.Errorf("failed to determine library main directory: %w", err)
+		return nil, fmt.Errorf("failed to determine project root directory: %w", err)
 	}
 
 	if err := os.MkdirAll(dstDir, os.ModePerm); err != nil {
@@ -84,29 +83,39 @@ func CopyGraphqlSchemas(dstDir string) ([]string, error) {
 
 	var copiedFiles []string
 
-	err = filepath.WalkDir(mainDir, func(path string, d os.DirEntry, err error) error {
+	err = filepath.WalkDir(rootDir, func(path string, d os.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
 
-		if d.IsDir() || filepath.Dir(path) == dstDir {
-			return nil
-		}
+		if d.IsDir() && filepath.Base(path) == "graph" {
+			return filepath.WalkDir(path, func(subPath string, subD os.DirEntry, subErr error) error {
+				if subErr != nil {
+					return subErr
+				}
 
-		if strings.HasSuffix(d.Name(), ".graphqls") {
-			hash, err := getFileHash(path)
-			if err != nil {
-				return err
-			}
+				if subD.IsDir() || filepath.Dir(subPath) == dstDir {
+					return nil
+				}
 
-			copiedPath, err := copyFile(path, dstDir, hash)
-			if err != nil {
-				return err
-			}
+				if strings.HasSuffix(subD.Name(), ".graphqls") {
+					hash, err := getFileHash(subPath)
+					if err != nil {
+						return err
+					}
 
-			if copiedPath != "" {
-				copiedFiles = append(copiedFiles, copiedPath)
-			}
+					copiedPath, err := copyFile(subPath, dstDir, hash)
+					if err != nil {
+						return err
+					}
+
+					if copiedPath != "" {
+						copiedFiles = append(copiedFiles, copiedPath)
+					}
+				}
+
+				return nil
+			})
 		}
 
 		return nil
