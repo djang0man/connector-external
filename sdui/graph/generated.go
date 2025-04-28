@@ -8,13 +8,13 @@ import (
 	"embed"
 	"errors"
 	"fmt"
-	"sdui/graph/model"
 	"strconv"
 	"sync"
 	"sync/atomic"
 
 	"github.com/99designs/gqlgen/graphql"
 	"github.com/99designs/gqlgen/graphql/introspection"
+	"github.com/djang0man/connector-external/sdui/graph/model"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
 )
@@ -824,7 +824,7 @@ func (ec *executionContext) _AppConnectorChip_chips(ctx context.Context, field g
 	}
 	res := resTmp.([]model.AppConnectorChipEnum)
 	fc.Result = res
-	return ec.marshalNAppConnectorChipEnum2ᚕsduiᚋgraphᚋmodelᚐAppConnectorChipEnumᚄ(ctx, field.Selections, res)
+	return ec.marshalNAppConnectorChipEnum2ᚕgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐAppConnectorChipEnumᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_AppConnectorChip_chips(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1125,7 +1125,7 @@ func (ec *executionContext) _UIBasicChip_chips(ctx context.Context, field graphq
 	}
 	res := resTmp.([]model.Chip)
 	fc.Result = res
-	return ec.marshalNChip2ᚕsduiᚋgraphᚋmodelᚐChipᚄ(ctx, field.Selections, res)
+	return ec.marshalNChip2ᚕgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐChipᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIBasicChip_chips(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1210,7 +1210,7 @@ func (ec *executionContext) _UICarousel_items(ctx context.Context, field graphql
 	}
 	res := resTmp.([]*model.UICarouselItem)
 	fc.Result = res
-	return ec.marshalNUICarouselItem2ᚕᚖsduiᚋgraphᚋmodelᚐUICarouselItemᚄ(ctx, field.Selections, res)
+	return ec.marshalNUICarouselItem2ᚕᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUICarouselItemᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UICarousel_items(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1341,7 +1341,7 @@ func (ec *executionContext) _UICarouselItem_image(ctx context.Context, field gra
 	}
 	res := resTmp.(*model.UIImage)
 	fc.Result = res
-	return ec.marshalOUIImage2ᚖsduiᚋgraphᚋmodelᚐUIImage(ctx, field.Selections, res)
+	return ec.marshalOUIImage2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIImage(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UICarouselItem_image(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1390,7 +1390,7 @@ func (ec *executionContext) _UIDefaultValue_valueType(ctx context.Context, field
 	}
 	res := resTmp.(*model.UIDefaultValueType)
 	fc.Result = res
-	return ec.marshalOUIDefaultValueType2ᚖsduiᚋgraphᚋmodelᚐUIDefaultValueType(ctx, field.Selections, res)
+	return ec.marshalOUIDefaultValueType2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDefaultValueType(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIDefaultValue_valueType(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1516,7 +1516,7 @@ func (ec *executionContext) _UIDynamicCondition_operator(ctx context.Context, fi
 	}
 	res := resTmp.(*model.UIDynamicConditionOperator)
 	fc.Result = res
-	return ec.marshalOUIDynamicConditionOperator2ᚖsduiᚋgraphᚋmodelᚐUIDynamicConditionOperator(ctx, field.Selections, res)
+	return ec.marshalOUIDynamicConditionOperator2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicConditionOperator(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIDynamicCondition_operator(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1557,7 +1557,7 @@ func (ec *executionContext) _UIDynamicCondition_expectedValue(ctx context.Contex
 	}
 	res := resTmp.(*model.UIDefaultValue)
 	fc.Result = res
-	return ec.marshalOUIDefaultValue2ᚖsduiᚋgraphᚋmodelᚐUIDefaultValue(ctx, field.Selections, res)
+	return ec.marshalOUIDefaultValue2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDefaultValue(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIDynamicCondition_expectedValue(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1645,7 +1645,7 @@ func (ec *executionContext) _UIDynamicField_type(ctx context.Context, field grap
 	}
 	res := resTmp.(*model.UIDDynamicFieldType)
 	fc.Result = res
-	return ec.marshalOUIDDynamicFieldType2ᚖsduiᚋgraphᚋmodelᚐUIDDynamicFieldType(ctx, field.Selections, res)
+	return ec.marshalOUIDDynamicFieldType2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDDynamicFieldType(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIDynamicField_type(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1859,7 +1859,7 @@ func (ec *executionContext) _UIDynamicField_defaultValue(ctx context.Context, fi
 	}
 	res := resTmp.(*model.UIDefaultValue)
 	fc.Result = res
-	return ec.marshalOUIDefaultValue2ᚖsduiᚋgraphᚋmodelᚐUIDefaultValue(ctx, field.Selections, res)
+	return ec.marshalOUIDefaultValue2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDefaultValue(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIDynamicField_defaultValue(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1906,7 +1906,7 @@ func (ec *executionContext) _UIDynamicField_validator(ctx context.Context, field
 	}
 	res := resTmp.(model.UIDynamicValidator)
 	fc.Result = res
-	return ec.marshalOUIDynamicValidator2sduiᚋgraphᚋmodelᚐUIDynamicValidator(ctx, field.Selections, res)
+	return ec.marshalOUIDynamicValidator2githubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicValidator(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIDynamicField_validator(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1950,7 +1950,7 @@ func (ec *executionContext) _UIDynamicField_options(ctx context.Context, field g
 	}
 	res := resTmp.([]*model.UIDynamicSelectOption)
 	fc.Result = res
-	return ec.marshalNUIDynamicSelectOption2ᚕᚖsduiᚋgraphᚋmodelᚐUIDynamicSelectOptionᚄ(ctx, field.Selections, res)
+	return ec.marshalNUIDynamicSelectOption2ᚕᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicSelectOptionᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIDynamicField_options(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -2167,7 +2167,7 @@ func (ec *executionContext) _UIDynamicFieldSet_fields(ctx context.Context, field
 	}
 	res := resTmp.([]*model.UIDynamicField)
 	fc.Result = res
-	return ec.marshalNUIDynamicField2ᚕᚖsduiᚋgraphᚋmodelᚐUIDynamicFieldᚄ(ctx, field.Selections, res)
+	return ec.marshalNUIDynamicField2ᚕᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicFieldᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIDynamicFieldSet_fields(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -2231,7 +2231,7 @@ func (ec *executionContext) _UIDynamicFieldSet_conditions(ctx context.Context, f
 	}
 	res := resTmp.([]*model.UIDynamicCondition)
 	fc.Result = res
-	return ec.marshalNUIDynamicCondition2ᚕᚖsduiᚋgraphᚋmodelᚐUIDynamicConditionᚄ(ctx, field.Selections, res)
+	return ec.marshalNUIDynamicCondition2ᚕᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicConditionᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIDynamicFieldSet_conditions(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -2368,7 +2368,7 @@ func (ec *executionContext) _UIDynamicSelect_defaultValue(ctx context.Context, f
 	}
 	res := resTmp.(*model.UIDefaultValue)
 	fc.Result = res
-	return ec.marshalOUIDefaultValue2ᚖsduiᚋgraphᚋmodelᚐUIDefaultValue(ctx, field.Selections, res)
+	return ec.marshalOUIDefaultValue2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDefaultValue(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIDynamicSelect_defaultValue(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -2459,7 +2459,7 @@ func (ec *executionContext) _UIDynamicSelectOption_value(ctx context.Context, fi
 	}
 	res := resTmp.(*model.UIDefaultValue)
 	fc.Result = res
-	return ec.marshalOUIDefaultValue2ᚖsduiᚋgraphᚋmodelᚐUIDefaultValue(ctx, field.Selections, res)
+	return ec.marshalOUIDefaultValue2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDefaultValue(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_UIDynamicSelectOption_value(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -6293,24 +6293,24 @@ func (ec *executionContext) ___Type(ctx context.Context, sel ast.SelectionSet, o
 
 // region    ***************************** type.gotpl *****************************
 
-func (ec *executionContext) unmarshalNAppConnectorChipEnum2sduiᚋgraphᚋmodelᚐAppConnectorChipEnum(ctx context.Context, v any) (model.AppConnectorChipEnum, error) {
+func (ec *executionContext) unmarshalNAppConnectorChipEnum2githubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐAppConnectorChipEnum(ctx context.Context, v any) (model.AppConnectorChipEnum, error) {
 	var res model.AppConnectorChipEnum
 	err := res.UnmarshalGQL(v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNAppConnectorChipEnum2sduiᚋgraphᚋmodelᚐAppConnectorChipEnum(ctx context.Context, sel ast.SelectionSet, v model.AppConnectorChipEnum) graphql.Marshaler {
+func (ec *executionContext) marshalNAppConnectorChipEnum2githubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐAppConnectorChipEnum(ctx context.Context, sel ast.SelectionSet, v model.AppConnectorChipEnum) graphql.Marshaler {
 	return v
 }
 
-func (ec *executionContext) unmarshalNAppConnectorChipEnum2ᚕsduiᚋgraphᚋmodelᚐAppConnectorChipEnumᚄ(ctx context.Context, v any) ([]model.AppConnectorChipEnum, error) {
+func (ec *executionContext) unmarshalNAppConnectorChipEnum2ᚕgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐAppConnectorChipEnumᚄ(ctx context.Context, v any) ([]model.AppConnectorChipEnum, error) {
 	var vSlice []any
 	vSlice = graphql.CoerceList(v)
 	var err error
 	res := make([]model.AppConnectorChipEnum, len(vSlice))
 	for i := range vSlice {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
-		res[i], err = ec.unmarshalNAppConnectorChipEnum2sduiᚋgraphᚋmodelᚐAppConnectorChipEnum(ctx, vSlice[i])
+		res[i], err = ec.unmarshalNAppConnectorChipEnum2githubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐAppConnectorChipEnum(ctx, vSlice[i])
 		if err != nil {
 			return nil, err
 		}
@@ -6318,7 +6318,7 @@ func (ec *executionContext) unmarshalNAppConnectorChipEnum2ᚕsduiᚋgraphᚋmod
 	return res, nil
 }
 
-func (ec *executionContext) marshalNAppConnectorChipEnum2ᚕsduiᚋgraphᚋmodelᚐAppConnectorChipEnumᚄ(ctx context.Context, sel ast.SelectionSet, v []model.AppConnectorChipEnum) graphql.Marshaler {
+func (ec *executionContext) marshalNAppConnectorChipEnum2ᚕgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐAppConnectorChipEnumᚄ(ctx context.Context, sel ast.SelectionSet, v []model.AppConnectorChipEnum) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -6342,7 +6342,7 @@ func (ec *executionContext) marshalNAppConnectorChipEnum2ᚕsduiᚋgraphᚋmodel
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNAppConnectorChipEnum2sduiᚋgraphᚋmodelᚐAppConnectorChipEnum(ctx, sel, v[i])
+			ret[i] = ec.marshalNAppConnectorChipEnum2githubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐAppConnectorChipEnum(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -6377,7 +6377,7 @@ func (ec *executionContext) marshalNBoolean2bool(ctx context.Context, sel ast.Se
 	return res
 }
 
-func (ec *executionContext) marshalNChip2sduiᚋgraphᚋmodelᚐChip(ctx context.Context, sel ast.SelectionSet, v model.Chip) graphql.Marshaler {
+func (ec *executionContext) marshalNChip2githubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐChip(ctx context.Context, sel ast.SelectionSet, v model.Chip) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -6387,7 +6387,7 @@ func (ec *executionContext) marshalNChip2sduiᚋgraphᚋmodelᚐChip(ctx context
 	return ec._Chip(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNChip2ᚕsduiᚋgraphᚋmodelᚐChipᚄ(ctx context.Context, sel ast.SelectionSet, v []model.Chip) graphql.Marshaler {
+func (ec *executionContext) marshalNChip2ᚕgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐChipᚄ(ctx context.Context, sel ast.SelectionSet, v []model.Chip) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -6411,7 +6411,7 @@ func (ec *executionContext) marshalNChip2ᚕsduiᚋgraphᚋmodelᚐChipᚄ(ctx c
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNChip2sduiᚋgraphᚋmodelᚐChip(ctx, sel, v[i])
+			ret[i] = ec.marshalNChip2githubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐChip(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -6461,7 +6461,7 @@ func (ec *executionContext) marshalNString2string(ctx context.Context, sel ast.S
 	return res
 }
 
-func (ec *executionContext) marshalNUICarouselItem2ᚕᚖsduiᚋgraphᚋmodelᚐUICarouselItemᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.UICarouselItem) graphql.Marshaler {
+func (ec *executionContext) marshalNUICarouselItem2ᚕᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUICarouselItemᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.UICarouselItem) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -6485,7 +6485,7 @@ func (ec *executionContext) marshalNUICarouselItem2ᚕᚖsduiᚋgraphᚋmodelᚐ
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNUICarouselItem2ᚖsduiᚋgraphᚋmodelᚐUICarouselItem(ctx, sel, v[i])
+			ret[i] = ec.marshalNUICarouselItem2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUICarouselItem(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -6505,7 +6505,7 @@ func (ec *executionContext) marshalNUICarouselItem2ᚕᚖsduiᚋgraphᚋmodelᚐ
 	return ret
 }
 
-func (ec *executionContext) marshalNUICarouselItem2ᚖsduiᚋgraphᚋmodelᚐUICarouselItem(ctx context.Context, sel ast.SelectionSet, v *model.UICarouselItem) graphql.Marshaler {
+func (ec *executionContext) marshalNUICarouselItem2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUICarouselItem(ctx context.Context, sel ast.SelectionSet, v *model.UICarouselItem) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -6515,7 +6515,7 @@ func (ec *executionContext) marshalNUICarouselItem2ᚖsduiᚋgraphᚋmodelᚐUIC
 	return ec._UICarouselItem(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNUIDynamicCondition2ᚕᚖsduiᚋgraphᚋmodelᚐUIDynamicConditionᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.UIDynamicCondition) graphql.Marshaler {
+func (ec *executionContext) marshalNUIDynamicCondition2ᚕᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicConditionᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.UIDynamicCondition) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -6539,7 +6539,7 @@ func (ec *executionContext) marshalNUIDynamicCondition2ᚕᚖsduiᚋgraphᚋmode
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNUIDynamicCondition2ᚖsduiᚋgraphᚋmodelᚐUIDynamicCondition(ctx, sel, v[i])
+			ret[i] = ec.marshalNUIDynamicCondition2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicCondition(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -6559,7 +6559,7 @@ func (ec *executionContext) marshalNUIDynamicCondition2ᚕᚖsduiᚋgraphᚋmode
 	return ret
 }
 
-func (ec *executionContext) marshalNUIDynamicCondition2ᚖsduiᚋgraphᚋmodelᚐUIDynamicCondition(ctx context.Context, sel ast.SelectionSet, v *model.UIDynamicCondition) graphql.Marshaler {
+func (ec *executionContext) marshalNUIDynamicCondition2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicCondition(ctx context.Context, sel ast.SelectionSet, v *model.UIDynamicCondition) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -6569,7 +6569,7 @@ func (ec *executionContext) marshalNUIDynamicCondition2ᚖsduiᚋgraphᚋmodel�
 	return ec._UIDynamicCondition(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNUIDynamicField2ᚕᚖsduiᚋgraphᚋmodelᚐUIDynamicFieldᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.UIDynamicField) graphql.Marshaler {
+func (ec *executionContext) marshalNUIDynamicField2ᚕᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicFieldᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.UIDynamicField) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -6593,7 +6593,7 @@ func (ec *executionContext) marshalNUIDynamicField2ᚕᚖsduiᚋgraphᚋmodelᚐ
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNUIDynamicField2ᚖsduiᚋgraphᚋmodelᚐUIDynamicField(ctx, sel, v[i])
+			ret[i] = ec.marshalNUIDynamicField2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicField(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -6613,7 +6613,7 @@ func (ec *executionContext) marshalNUIDynamicField2ᚕᚖsduiᚋgraphᚋmodelᚐ
 	return ret
 }
 
-func (ec *executionContext) marshalNUIDynamicField2ᚖsduiᚋgraphᚋmodelᚐUIDynamicField(ctx context.Context, sel ast.SelectionSet, v *model.UIDynamicField) graphql.Marshaler {
+func (ec *executionContext) marshalNUIDynamicField2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicField(ctx context.Context, sel ast.SelectionSet, v *model.UIDynamicField) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -6623,7 +6623,7 @@ func (ec *executionContext) marshalNUIDynamicField2ᚖsduiᚋgraphᚋmodelᚐUID
 	return ec._UIDynamicField(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNUIDynamicSelectOption2ᚕᚖsduiᚋgraphᚋmodelᚐUIDynamicSelectOptionᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.UIDynamicSelectOption) graphql.Marshaler {
+func (ec *executionContext) marshalNUIDynamicSelectOption2ᚕᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicSelectOptionᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.UIDynamicSelectOption) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -6647,7 +6647,7 @@ func (ec *executionContext) marshalNUIDynamicSelectOption2ᚕᚖsduiᚋgraphᚋm
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNUIDynamicSelectOption2ᚖsduiᚋgraphᚋmodelᚐUIDynamicSelectOption(ctx, sel, v[i])
+			ret[i] = ec.marshalNUIDynamicSelectOption2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicSelectOption(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -6667,7 +6667,7 @@ func (ec *executionContext) marshalNUIDynamicSelectOption2ᚕᚖsduiᚋgraphᚋm
 	return ret
 }
 
-func (ec *executionContext) marshalNUIDynamicSelectOption2ᚖsduiᚋgraphᚋmodelᚐUIDynamicSelectOption(ctx context.Context, sel ast.SelectionSet, v *model.UIDynamicSelectOption) graphql.Marshaler {
+func (ec *executionContext) marshalNUIDynamicSelectOption2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicSelectOption(ctx context.Context, sel ast.SelectionSet, v *model.UIDynamicSelectOption) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -7002,7 +7002,7 @@ func (ec *executionContext) marshalOString2ᚖstring(ctx context.Context, sel as
 	return res
 }
 
-func (ec *executionContext) unmarshalOUIDDynamicFieldType2ᚖsduiᚋgraphᚋmodelᚐUIDDynamicFieldType(ctx context.Context, v any) (*model.UIDDynamicFieldType, error) {
+func (ec *executionContext) unmarshalOUIDDynamicFieldType2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDDynamicFieldType(ctx context.Context, v any) (*model.UIDDynamicFieldType, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -7011,21 +7011,21 @@ func (ec *executionContext) unmarshalOUIDDynamicFieldType2ᚖsduiᚋgraphᚋmode
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalOUIDDynamicFieldType2ᚖsduiᚋgraphᚋmodelᚐUIDDynamicFieldType(ctx context.Context, sel ast.SelectionSet, v *model.UIDDynamicFieldType) graphql.Marshaler {
+func (ec *executionContext) marshalOUIDDynamicFieldType2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDDynamicFieldType(ctx context.Context, sel ast.SelectionSet, v *model.UIDDynamicFieldType) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return v
 }
 
-func (ec *executionContext) marshalOUIDefaultValue2ᚖsduiᚋgraphᚋmodelᚐUIDefaultValue(ctx context.Context, sel ast.SelectionSet, v *model.UIDefaultValue) graphql.Marshaler {
+func (ec *executionContext) marshalOUIDefaultValue2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDefaultValue(ctx context.Context, sel ast.SelectionSet, v *model.UIDefaultValue) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return ec._UIDefaultValue(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalOUIDefaultValueType2ᚖsduiᚋgraphᚋmodelᚐUIDefaultValueType(ctx context.Context, v any) (*model.UIDefaultValueType, error) {
+func (ec *executionContext) unmarshalOUIDefaultValueType2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDefaultValueType(ctx context.Context, v any) (*model.UIDefaultValueType, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -7034,14 +7034,14 @@ func (ec *executionContext) unmarshalOUIDefaultValueType2ᚖsduiᚋgraphᚋmodel
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalOUIDefaultValueType2ᚖsduiᚋgraphᚋmodelᚐUIDefaultValueType(ctx context.Context, sel ast.SelectionSet, v *model.UIDefaultValueType) graphql.Marshaler {
+func (ec *executionContext) marshalOUIDefaultValueType2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDefaultValueType(ctx context.Context, sel ast.SelectionSet, v *model.UIDefaultValueType) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return v
 }
 
-func (ec *executionContext) unmarshalOUIDynamicConditionOperator2ᚖsduiᚋgraphᚋmodelᚐUIDynamicConditionOperator(ctx context.Context, v any) (*model.UIDynamicConditionOperator, error) {
+func (ec *executionContext) unmarshalOUIDynamicConditionOperator2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicConditionOperator(ctx context.Context, v any) (*model.UIDynamicConditionOperator, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -7050,21 +7050,21 @@ func (ec *executionContext) unmarshalOUIDynamicConditionOperator2ᚖsduiᚋgraph
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalOUIDynamicConditionOperator2ᚖsduiᚋgraphᚋmodelᚐUIDynamicConditionOperator(ctx context.Context, sel ast.SelectionSet, v *model.UIDynamicConditionOperator) graphql.Marshaler {
+func (ec *executionContext) marshalOUIDynamicConditionOperator2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicConditionOperator(ctx context.Context, sel ast.SelectionSet, v *model.UIDynamicConditionOperator) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return v
 }
 
-func (ec *executionContext) marshalOUIDynamicValidator2sduiᚋgraphᚋmodelᚐUIDynamicValidator(ctx context.Context, sel ast.SelectionSet, v model.UIDynamicValidator) graphql.Marshaler {
+func (ec *executionContext) marshalOUIDynamicValidator2githubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIDynamicValidator(ctx context.Context, sel ast.SelectionSet, v model.UIDynamicValidator) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return ec._UIDynamicValidator(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalOUIImage2ᚖsduiᚋgraphᚋmodelᚐUIImage(ctx context.Context, sel ast.SelectionSet, v *model.UIImage) graphql.Marshaler {
+func (ec *executionContext) marshalOUIImage2ᚖgithubᚗcomᚋdjang0manᚋconnectorᚑexternalᚋsduiᚋgraphᚋmodelᚐUIImage(ctx context.Context, sel ast.SelectionSet, v *model.UIImage) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
